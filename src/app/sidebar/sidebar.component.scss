@@ -5,13 +5,49 @@
   .sidenav {
     background-color: #673ab7;
     color: white;
-    text-align: center;
+    border: none;
     width: 250px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    img {
+      width: 50px;
+      margin: 0.5rem 0 0 0.5rem;
+    }
 
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            gap: 1rem;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: #9575cd;
+              cursor: pointer;
+            }
+
+            &.active {
+              background-color: #512da8;
+            }
+          }
+        }
+      }
+    }
     .sidenav-content {
       padding: 20px;
       height: 100%;
@@ -27,7 +63,7 @@
       margin: 0;
       border: none;
       background-color: transparent;
-      mat-icon {
+      #menu-icon {
         font-size: 2.5rem;
         color: #ffffff;
         display: flex;
