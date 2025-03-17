@@ -1,50 +1,34 @@
-<mat-drawer-container class="mat-drawer-container" autosize>
-  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
-    <img src="./assets/img/crm-logo.png" alt="" />
-    <nav>
-      <ul>
-        <li>
-          <a routerLink="/" routerLinkActive="active" (click)="drawer.toggle()">
-            <mat-icon
-              fontIcon="dashboard_customize"
-              id="dashboard-icon"
-            ></mat-icon>
-            Dashboard</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/about-us"
-            routerLinkActive="active"
-            (click)="drawer.toggle()"
-            ><mat-icon fontIcon="person" id="user-icon"></mat-icon> User</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/imprint"
-            routerLinkActive="active"
-            (click)="drawer.toggle()"
-            ><mat-icon fontIcon="article_person" id="imprint-icon"></mat-icon>
-            Imprint</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/privacy-policy"
-            routerLinkActive="active"
-            (click)="drawer.toggle()"
-            ><mat-icon fontIcon="policy" id="privacy-policy-icon"></mat-icon>
-            Privacy Policy</a
-          >
-        </li>
-      </ul>
-    </nav>
-  </mat-drawer>
-
-  <div class="sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <mat-icon fontIcon="menu" id="menu-icon"></mat-icon>
-    </button>
-  </div>
-</mat-drawer-container>
+<div class="sidenav" [ngClass]="{ open: isOpen }">
+  <img src="./assets/img/crm-logo.png" alt="" />
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="dashboard" routerLinkActive="active">
+          <mat-icon
+            fontIcon="dashboard_customize"
+            id="dashboard-icon"
+          ></mat-icon>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a routerLink="user" routerLinkActive="active">
+          <mat-icon fontIcon="person" id="user-icon"></mat-icon>
+          User
+        </a>
+      </li>
+      <li>
+        <a routerLink="imprint" routerLinkActive="active">
+          <mat-icon fontIcon="article_person" id="imprint-icon"></mat-icon>
+          Imprint
+        </a>
+      </li>
+      <li>
+        <a routerLink="privacy-policy" routerLinkActive="active">
+          <mat-icon fontIcon="policy" id="privacy-policy-icon"></mat-icon>
+          Privacy Policy
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

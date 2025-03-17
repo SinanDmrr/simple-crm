@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <app-sidebar></app-sidebar>
+    <button type="button" (click)="onToggleSidebar()">
+      <mat-icon fontIcon="menu" id="menu-icon"></mat-icon>
+    </button>
     <span>Simple CRM</span>
   </mat-toolbar-row>
 </mat-toolbar>

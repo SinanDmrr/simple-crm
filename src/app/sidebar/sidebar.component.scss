@@ -1,78 +1,53 @@
-.mat-drawer-container {
-  height: 100%;
-  background-color: transparent;
+.sidenav {
+  background-color: #673ab7;
+  color: white;
+  border: none;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  border-right: 1px solid #31195c;
 
-  .sidenav {
-    background-color: #673ab7;
-    color: white;
-    border: none;
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
+  &.open {
     left: 0;
-    img {
-      width: 50px;
-      margin: 0.5rem 0 0 0.5rem;
-    }
-
-    nav {
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-          display: flex;
-          align-items: center;
-          width: 100%;
-          a {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0.5rem;
-            gap: 1rem;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-
-            &:hover {
-              background-color: #9575cd;
-              cursor: pointer;
-            }
-
-            &.active {
-              background-color: #512da8;
-            }
-          }
-        }
-      }
-    }
-    .sidenav-content {
-      padding: 20px;
-      height: 100%;
-    }
   }
 
-  .sidenav-content {
-    margin: 0 1rem;
-    padding: 0;
-    line-height: 0;
-    button {
+  img {
+    width: 50px;
+    margin: 0.5rem 0 0 0.5rem;
+  }
+
+  nav {
+    ul {
+      list-style: none;
       padding: 0;
       margin: 0;
-      border: none;
-      background-color: transparent;
-      #menu-icon {
-        font-size: 2.5rem;
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        &:hover {
-          color: #cccccc;
-          cursor: pointer;
+      li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        a {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0.5rem;
+          gap: 1rem;
+          color: white;
+          text-decoration: none;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #9575cd;
+            cursor: pointer;
+          }
+
+          &.active {
+            background-color: #512da8;
+          }
         }
       }
     }

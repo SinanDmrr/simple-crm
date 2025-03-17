@@ -3,5 +3,20 @@ mat-toolbar {
   mat-toolbar-row {
     padding: 0;
     display: flex;
+    button {
+      margin-left: 0.5rem;
+      background-color: transparent;
+      border: none;
+      mat-icon {
+        font-size: 3rem;
+        width: 3rem;
+        height: 3rem;
+        color: white;
+
+        &:hover {
+          color: rgb(228, 228, 228);
+        }
+      }
+    }
   }
 }

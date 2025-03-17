@@ -1,2 +1,9 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<main>
+  <app-sidebar #sidebar></app-sidebar>
+  <div id="header-router" [ngClass]="{ 'sidebar-open': sidebar.isOpen }">
+    <app-header (toggleSidebar)="onToggleSidebar(sidebar)"></app-header>
+    <div id="router-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
